@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "hypotenuse\tside1\tside2\n";
+
+    for(int hypotenuse{1}; hypotenuse <= 500; ++hypotenuse) {
+        for(int side1{1}; side1 < hypotenuse; ++side1) {
+            for(int side2{1}; side2 <= side1; ++side2) {
+                if(hypotenuse * hypotenuse == side1 * side1 + side2 * side2) {
+                    cout << hypotenuse << "\t" << side1 << "\t" << side2 << endl;
+                }
+            }
+        }
+    }
+}
